@@ -5,13 +5,24 @@ export default {
             <div style="
         padding-bottom: 100%;
         " :style="{
-            'background-color': item ? item.hex : hex,
+            'background-color': item ? item.hex : '#CCC',
         }"></div>
         <p class="control">
             <input class="input" type="text" @blur="setHex" v-model="hex">
         </p>
+        <div @click="remove" class="button is-danger is-fullwidth">Remove</div>
         </div>
     `,
+
+    mounted() {
+        if ( ! this.item ) {
+            this.hex = '#CCC';
+            this.setHex();
+        }
+        else {
+            this.hex = this.item.hex;
+        }
+    },
 
     data() {
         return {
@@ -21,9 +32,7 @@ export default {
 
     methods: {
         setHex() {
-            var myObject = this.item;
-            myObject.hex = this.hex;
-            this.update( myObject, this.index );
+            this.update( { hex: this.hex }, this.index );
         }
     },
 

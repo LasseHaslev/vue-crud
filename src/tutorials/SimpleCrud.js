@@ -38,7 +38,7 @@ export default {
                 <tr v-for="( item, index ) in items">
                     <td>{{ item }}</td>
                     <td class="has-text-right">
-                        <button class="button is-warning" @click="change( null, index )">Empty</button>
+                        <button class="button is-warning" @click="update( null, index )">Empty</button>
                         <button class="button is-danger" @click="removeItem( item )">Remove</button>
                     </td>
                 </tr>

@@ -30,7 +30,7 @@ export default {
             }
             this.items.push( item );
         },
-        change( item, index ) {
+        update( item, index ) {
             this.$set( this.items, index, item );
         },
 

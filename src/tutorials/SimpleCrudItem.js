@@ -10,7 +10,7 @@ export default {
             <h1 class="title">Crud item</h1>
             <div class="columns is-multiline">
                 <div v-for="( item, index ) in items" class="column is-2">
-        <crud-item :item="item" :index="index"></crud-item>
+        <crud-item @remove="remove" @update="update" :item="item" :index="index"></crud-item>
                 </div>
                 <div class="column is-2">
                     <div style="
