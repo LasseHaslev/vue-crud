@@ -10,14 +10,14 @@ export default {
         <h3 class="title">Add to list</h3>
         <div class="columns is-multiple">
             <div class="column">
-                <h5 class="title">Prepend</h5>
+                <h5 class="title is-4">Prepend</h5>
                 <div>
                     <div v-for="item in itemsToAdd" style="margin-right: 3px;" @click="prepend( item )" class="button is-small control is-primary">{{ item }}</div>
                 </div>
                 <div class="button is-success is-large" @click="prepend( itemsToAdd )">Add all!</div>
             </div>
             <div class="column">
-                <h5 class="title">Append</h5>
+                <h5 class="title is-4">Append</h5>
                 <div>
                     <div v-for="item in itemsToAdd" style="margin-right: 3px;" @click="append( item )" class="button is-small control is-primary">{{ item }}</div>
                 </div>
