@@ -11,6 +11,7 @@
         </section>
 
         <simple-crud></simple-crud>
+        <simple-crud-item></simple-crud-item>
 
         <div class="hero is-primary">
             <div class="hero-body">
@@ -24,6 +25,7 @@
 
 <script>
 import SimpleCrud from './tutorials/SimpleCrud';
+import SimpleCrudItem from './tutorials/SimpleCrudItem';
 export default {
     name: 'app',
     data () {
@@ -32,6 +34,7 @@ export default {
     },
     components: {
         SimpleCrud,
+        SimpleCrudItem,
     }
 }
 </script>
