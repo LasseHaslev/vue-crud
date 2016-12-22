@@ -1,9 +1,7 @@
+import HasItems from './mixins/HasItems';
 export default {
-    data() {
-        return {
-            items: [],
-        }
-    },
+
+    mixins: [ HasItems ],
 
     methods: {
         removeItem( item ) {
