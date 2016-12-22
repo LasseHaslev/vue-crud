@@ -6,8 +6,7 @@ export default {
     template: `
     <section class="section">
         <div class="container">
-
-        <h3 class="title">Add to list</h3>
+        <h1 class="title">Simple CRUD</h1>
         <div class="columns is-multiple">
             <div class="column">
                 <h5 class="title is-4">Prepend</h5>

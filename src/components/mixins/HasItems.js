@@ -5,19 +5,7 @@ export default {
 	        default: null,
 	    },
 
-        url: {
-            type: String,
-            default: null,
-        },
-
         adaptor: {
-            type:Function,
-            default( item ) {
-                return item;
-            },
-        },
-
-        filter: {
             type:Function,
             default( item ) {
                 return item;
@@ -28,6 +16,12 @@ export default {
     mounted() {
         if ( this.$data.items ) {
             this.items = this.$data.items;
+            return;
+        }
+
+        if ( this.$options.propsData.objects ) {
+            this.items = this.$options.propsData.objects.map( this.adaptor );
+            return;
         }
     },
 

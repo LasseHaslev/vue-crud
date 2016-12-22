@@ -10,6 +10,7 @@
             </div>
         </section>
 
+        <simple-adding-objects-crud></simple-adding-objects-crud>
         <simple-crud></simple-crud>
         <simple-crud-item></simple-crud-item>
 
@@ -24,6 +25,7 @@
 </template>
 
 <script>
+import SimpleAddingObjectsCrud from './tutorials/SimpleAddingObjectsCrud';
 import SimpleCrud from './tutorials/SimpleCrud';
 import SimpleCrudItem from './tutorials/SimpleCrudItem';
 export default {
@@ -35,6 +37,7 @@ export default {
     components: {
         SimpleCrud,
         SimpleCrudItem,
+        SimpleAddingObjectsCrud,
     }
 }
 </script>
