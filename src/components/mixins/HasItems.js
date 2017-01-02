@@ -41,10 +41,4 @@ export default {
 	        hiddenItems: [],
 	    }
 	},
-
-	methods: {
-	    open() {
-	        return '';
-	    },
-	},
 }
