@@ -1,7 +1,7 @@
 {
   "name": "@lassehaslev/vue-crud",
   "description": "Create read update delete logic for Vue",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "author": "Lasse S. Haslev <lasse@haslev.no>",
   "repository": {
     "type": "git",
