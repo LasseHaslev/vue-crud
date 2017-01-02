@@ -9,7 +9,7 @@ export default {
         <h1 class="title">Simple CRUD</h1>
         <div class="columns is-multiple">
             <div class="column">
-                <h5 class="title is-4">Prepend</h5>
+                <h5 class="title is-4">Prepend / Add</h5>
                 <div>
                     <div v-for="item in itemsToAdd" style="margin-right: 3px;" @click="prepend( item )" class="button is-small control is-primary">{{ item }}</div>
                 </div>
@@ -48,13 +48,16 @@ export default {
     </section>
     `,
 
+    mounted() {
+        this.add([
+            'ActionScript.',
+            'Ada (multi-purpose language)',
+            'ALGOL (extremely influential language design – the second high level language compiler) ...',
+        ]);
+    },
+
     data() {
         return {
-            items: [
-                'ActionScript.',
-                'Ada (multi-purpose language)',
-                'ALGOL (extremely influential language design – the second high level language compiler) ...',
-            ],
 
             itemsToAdd: [
                 'Ateji PX, an extension of the Java language for parallelism.',

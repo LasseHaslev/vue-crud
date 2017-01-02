@@ -26,9 +26,8 @@ export default {
     </section>
     `,
 
-    data() {
-        return {
-            items: [
+    mounted() {
+        this.add( [
                 {
                     name: 'Red',
                     hex: '#F00',
@@ -41,8 +40,7 @@ export default {
                     name: 'Blue',
                     hex: '#00F',
                 },
-            ],
-        }
+            ] );
     },
 
     components: {

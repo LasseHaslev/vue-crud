@@ -10,6 +10,9 @@ export default {
         remove( index ) {
             this.items.splice( index, 1 );
         },
+        add( item ) {
+            return this.prepend( item );
+        },
         prepend( item ) {
             if (item instanceof Array) {
                 for (var i = item.length-1, len = 0; i >= len; i--) {
