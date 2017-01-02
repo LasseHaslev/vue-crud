@@ -14,30 +14,29 @@ export default {
             return this.prepend( item );
         },
         prepend( item ) {
+            item = this.adaptor( item );
             if (item instanceof Array) {
-                item = this.adaptor( item );
                 for (var i = item.length-1, len = 0; i >= len; i--) {
                     this.items.unshift( item[i] );
                 }
                 return;
             }
 
-            item = this.aliasForItemAdaptor( item );
             this.items.unshift( item );
         },
         append( item ) {
+            item = this.adaptor( item );
             if (item instanceof Array) {
-                item = this.adaptor( item );
                 for (var i = 0, len = item.length; i < len; i++) {
                     this.items.push( item[i] );
                 }
                 return;
             }
-            item = this.aliasForItemAdaptor( item );
+
             this.items.push( item );
         },
         update( item, index ) {
-            item = this.aliasForItemAdaptor( item );
+            item = this.adaptor( item );
             this.$set( this.items, index, item );
         },
 
