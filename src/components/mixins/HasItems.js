@@ -20,7 +20,8 @@ export default {
         }
 
         if ( this.$options.propsData.objects ) {
-            this.items = this.$options.propsData.objects.map( this.adaptor );
+            // this.items = this.$options.propsData.objects.map( this.adaptor );
+            this.items = this.adaptor(this.$options.propsData.objects);
             return;
         }
     },
