@@ -11,7 +11,20 @@ export default {
                 return item;
             },
         },
+        'item-adaptor': {
+            type:Function,
+            default: null,
+        },
 	},
+
+    methods: {
+        aliasForItemAdaptor( item ) {
+            if ( this.itemAdaptor ) {
+                return this.itemAdaptor( item );
+            }
+            return this.adaptor( item );
+        },
+    },
 
     mounted() {
         if ( this.$data.items ) {
