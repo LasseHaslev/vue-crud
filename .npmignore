@@ -1,6 +1,4 @@
-src/tutorials/
-src/App.vue
-src/main.js
+src/
 
 index.html
 webpack.config.js
