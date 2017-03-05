@@ -6,9 +6,12 @@ export default {
     methods: {
         removeItem( item ) {
             this.remove( this.items.indexOf( item ) );
+            return item;
         },
         remove( index ) {
+            var item = this.items[ index ];
             this.items.splice( index, 1 );
+            return item;
         },
         add( item ) {
             return this.prepend( item );
@@ -23,6 +26,8 @@ export default {
             }
 
             this.items.unshift( item );
+
+            return item;
         },
         append( item ) {
             item = this.adaptor( item );
@@ -34,10 +39,13 @@ export default {
             }
 
             this.items.push( item );
+
+            return item;
         },
         update( item, index ) {
             item = this.adaptor( item );
             this.$set( this.items, index, item );
+            return item;
         },
 
         removeAll() {
